@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import api from '../../service/Api'
-import './style.css'
+import { Link } from 'react-router-dom';
+import api from '../../service/Api';
+import { ContainerRepositories, ImgRepositories, TextRepositories, ListRepositories } from './style';
 
 class Repositories extends Component {
   constructor(props){
@@ -18,7 +18,6 @@ class Repositories extends Component {
     api.get("/users/grazidiandra/repos")
     .then(response => {
         this.setState({myRepo: response.data, myAvatar: response.data[0].owner })
-        console.log(response.data)
     })
     .catch(e => console.log(e))
   }
@@ -26,16 +25,16 @@ class Repositories extends Component {
   render() {
     const { myAvatar } = this.state
     return (
-      <div className="Repositories-container">
+      <ContainerRepositories>
         <span>
-          <img className="Repositories-img" src={myAvatar.avatar_url} alt='avatar'/>
-          <h3 className="Repositories-login">Login: {myAvatar.login}</h3>
-          <h4 className="Repositories-git">Github:<a href={myAvatar.html_url}>{myAvatar.html_url}</a></h4>
+          <ImgRepositories src={myAvatar.avatar_url} alt='avatar'/>
+          <TextRepositories >Login: {myAvatar.login}</TextRepositories>
+          <TextRepositories >Github: <a href={myAvatar.html_url}>{myAvatar.html_url}</a></TextRepositories>
         </span>
-        <ul className="Repositories-list">
+        <ListRepositories>
           {this.state.myRepo.map((repo, idx) => <li key={idx}> <Link to={`/repos/${repo.name}`}>{repo.name}</Link></li>)}
-        </ul>
-      </div>
+        </ListRepositories>
+      </ContainerRepositories>
     );
   }
 }

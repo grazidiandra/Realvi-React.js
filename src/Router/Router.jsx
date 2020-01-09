@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Repositories from '../Components/Repositories/';
 import Commits from '../Components/Commits';
 
-const Router = () => (
+export default props => (
   <BrowserRouter>
     <Switch>  
       <Route exact path='/' component={Repositories}/>
@@ -11,5 +11,3 @@ const Router = () => (
     </Switch>
   </BrowserRouter>
 )
-
-export default Router;

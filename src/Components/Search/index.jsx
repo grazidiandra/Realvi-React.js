@@ -1,9 +1,9 @@
 import React from 'react';
-import './style.css'
+import { InpuSearch } from './style.js';
 
 const Search = ({ value, method, placeholder}) => (
-        <div className='components-searchBar'>
-          <input type="text" placeholder={placeholder} value={value} onChange={method}/>
+        <div>
+          <InpuSearch type="text" placeholder={placeholder} value={value} onChange={method}/>
         </div>
     );
 

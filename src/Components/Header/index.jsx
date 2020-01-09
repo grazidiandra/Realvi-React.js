@@ -1,11 +1,11 @@
 import React from 'react';
-import './style.css';
+import { HeaderNav, ImgNav } from './style';
 
 const Header = () => (
-  <header className="header"> 
-    <img className="header-img" alt='githubimg' src='/img/github.png' />
+  <HeaderNav className="header"> 
+    <ImgNav className="header-img" alt='githubimg' src='/img/github.png' />
     GitHub | My  repositories
-  </header>
+  </HeaderNav>
 )
 
 export default Header;

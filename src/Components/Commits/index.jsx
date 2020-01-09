@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import api from '../../service/Api'
+import { Link } from 'react-router-dom';
+import api from '../../service/Api';
 import Search from '../Search';
-import './style.css'
+import { ContainerCommits, ListCommits, StyledLink } from './style';
 
 class Commits extends Component {
   constructor(props){
@@ -37,13 +37,13 @@ class Commits extends Component {
 
   render() {
     return (
-      <div className='commits-conatiner'>
+      <ContainerCommits className='commits-conatiner'>
         <Search placeholder={'Search'} method={this.searchCommits} value={this.state.input}/>
-        <ul className='commits-list'>
+        <ListCommits className='commits-list'>
           {this.setCommits(this.state.input).slice(0, 20).map((e, idx) => <li key={idx}>{e.commit.message}</li>)}
-        </ul>
-        <Link  to='/' className='commits-btn'>BACK TO REPOSITORIES</Link>
-      </div>
+        </ListCommits>
+        <StyledLink  to='/' className='commits-btn'>BACK TO REPOSITORIES</StyledLink>
+      </ContainerCommits>
     );
   }
 }
