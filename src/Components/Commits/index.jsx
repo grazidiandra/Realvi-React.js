@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import api from '../../service/Api';
 import Search from '../Search';
 import { ContainerCommits, ListCommits, StyledLink } from './style';
