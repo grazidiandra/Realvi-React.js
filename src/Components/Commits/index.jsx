@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../service/Api';
-import Search from '../Search';
+import Search from '../SearchCommits';
 import { ContainerCommits, ListCommits, StyledLink } from './style';
 
 class Commits extends Component {
@@ -37,7 +37,7 @@ class Commits extends Component {
   render() {
     return (
       <ContainerCommits className='commits-conatiner'>
-        <Search placeholder={'Search'} method={this.searchCommits} value={this.state.input}/>
+        <Search placeholder={'Search Commit'} method={this.searchCommits} value={this.state.input}/>
         <ListCommits className='commits-list'>
           {this.setCommits(this.state.input).slice(0, 20).map((e, idx) => <li key={idx}>{e.commit.message}</li>)}
         </ListCommits>

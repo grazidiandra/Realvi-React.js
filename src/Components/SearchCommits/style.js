@@ -9,6 +9,6 @@ export const InpuSearch = styled.input`
   height: 50px;
   margin-bottom: 30px;
   outline: none;
-  padding: 10px;
+  padding: 30px;
   width: 700px;
 `

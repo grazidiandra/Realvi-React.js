@@ -10,7 +10,7 @@ export const ImgRepositories = styled.img`
   border: 1px solid #a09a9a;
   border-radius: 50%;
   height: 300px;
-  margin: 150px 20px 50px 20px;
+  margin: 50px 20px 50px 20px;
 `;
 
 export const TextRepositories = styled.p`
@@ -31,10 +31,9 @@ export const TextRepositories = styled.p`
 
 export const ListRepositories = styled.ul`
   border-bottom: 1px solid #a09a9a;
-  height: 70vh;
-  margin: 80px 0;
+  height: 55vh;
+  margin: 50px 0;
   overflow: scroll;
-  padding: 10px;
 
     li {
       align-items: center; 
@@ -59,3 +58,8 @@ export const ListRepositories = styled.ul`
       height: 50px;
     }
   `;
+
+export const Alert = styled.p`
+color: white;
+text-align: center;
+`;

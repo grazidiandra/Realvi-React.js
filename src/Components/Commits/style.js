@@ -6,13 +6,13 @@ export const ContainerCommits = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 50px 0;
+  margin-top: 50px;
 `;
 
 export const ListCommits = styled.ul`  
   border-bottom: 1px solid #a09a9a;
   height: 60vh;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   padding: 10px;
   overflow: scroll;
 
