@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import api from '../../service/Api';
 import Search from '../SearchCommits';
-import { ContainerCommits, ListCommits, StyledLink } from './style';
+import { ContainerCommits, ListCommits, StyledLink, Alert } from './style';
 
 class Commits extends Component {
   constructor(props){
     super(props)
     this.state = {
       myCommits: [],
-      input: ''
+      input: '', 
+      error: ''
     }
     this.searchCommits = this.searchCommits.bind(this)
   }
@@ -19,7 +20,7 @@ class Commits extends Component {
     .then(response => {
         this.setState({myCommits: response.data })
     })
-    .catch(e => console.log(e))
+    .catch(() => this.setState({error: 'No commits' }) )
   }
 
   searchCommits(e) {
@@ -35,11 +36,13 @@ class Commits extends Component {
   }
 
   render() {
+    const { input, error } = this.state
     return (
       <ContainerCommits className='commits-conatiner'>
-        <Search placeholder={'Search Commit'} method={this.searchCommits} value={this.state.input}/>
+        <Search placeholder={'Search Commit'} method={this.searchCommits} value={input}/>
         <ListCommits className='commits-list'>
-          {this.setCommits(this.state.input).slice(0, 20).map((e, idx) => <li key={idx}>{e.commit.message}</li>)}
+        <Alert>{error}</Alert> 
+          {this.setCommits(input).slice(0, 20).map((e, idx) => <li key={idx}>{e.commit.message}</li>)}
         </ListCommits>
         <StyledLink  to='/' className='commits-btn'>BACK TO REPOSITORIES</StyledLink>
       </ContainerCommits>

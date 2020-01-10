@@ -43,3 +43,7 @@ export const StyledLink = styled(Link)`
     }
   `;
   
+export const Alert = styled.p`
+  color: white;
+  text-align: center;
+`;

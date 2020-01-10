@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import  SearchRepository from '../SearchRepository';
+import  SearchProfile from '../SearchProfile';
 import { ContainerRepositories, ImgRepositories, TextRepositories, ListRepositories, Alert } from './style';
 
 const Repositories =  ({ avatar, repo, error, submitHandler, searchRepos, input }) => {
   return (
   <Fragment>
-    <SearchRepository
+    <SearchProfile
       placeholder={'Search Repository'} submitHandler={submitHandler} method={searchRepos} input={input} />
     <Alert>{error}</Alert> 
     <ContainerRepositories>
