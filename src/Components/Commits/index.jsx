@@ -14,8 +14,8 @@ class Commits extends Component {
   }
 
   componentDidMount() {
-    const { name } = this.props.match.params;
-    api.get(`/repos/grazidiandra/${name}/commits`)
+    const { value, name } = this.props.match.params;
+    api.get(`/repos/${value}/${name}/commits`)
     .then(response => {
         this.setState({myCommits: response.data })
     })

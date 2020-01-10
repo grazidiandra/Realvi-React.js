@@ -1,13 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Repositories from '../Components/Repositories/';
 import Commits from '../Components/Commits';
+import Repositories from '../Components/Repositories';
 
-export default props => (
+const Router = (props) => {
+  return (
   <BrowserRouter>
     <Switch>  
-      <Route exact path='/' component={Repositories}/>
-      <Route path='/repos/:name' component={Commits}/>
+      <Route exact path='/' render={() => <Repositories {...props} />} />
+      <Route path='/repos/:value/:name' component={Commits}/>
     </Switch>
   </BrowserRouter>
-)
+  )
+}
+
+export default Router;
