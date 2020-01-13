@@ -27,6 +27,7 @@ npm start # build-in the project Port:3000
 [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)  
 [HTML](https://devdocs.io/html/)    
 [Style-Components](https://www.styled-components.com/)
+[Netlify](https://www.netlify.com/)
 
 # INTRODUCÃO AO TESTE
 ### TESTE FRONT-END 
