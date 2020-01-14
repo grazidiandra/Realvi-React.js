@@ -4,8 +4,8 @@ import Search from '../SearchCommits';
 import { ContainerCommits, ListCommits, StyledLink, Alert } from './style';
 
 class Commits extends Component {
-  constructor(props){
-    super(props)
+  constructor(){
+    super()
     this.state = {
       myCommits: [],
       input: '', 

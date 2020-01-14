@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import  SearchProfile from '../SearchProfile';
 import { ContainerRepositories, ImgRepositories, TextRepositories, ListRepositories, Alert } from './style';
 
@@ -22,5 +23,14 @@ const Repositories =  ({ avatar, repo, error, submitHandler, searchRepos, input 
   </Fragment>
   )
 };
+
+Repositories.propTypes = {
+  avatar: PropTypes.object,
+  repo: PropTypes.array,
+  error: PropTypes.string,
+  submitHandler: PropTypes.func.isRequired,
+  searchRepos: PropTypes.func.isRequired,
+  input: PropTypes.string
+}
 
 export default Repositories;

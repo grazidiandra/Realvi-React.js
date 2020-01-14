@@ -8,7 +8,7 @@ class Home extends Component {
     super();
     this.state = {
       repo: [],
-      avatar: '',
+      avatar: null,
       input: '',
       error: ''
     };
