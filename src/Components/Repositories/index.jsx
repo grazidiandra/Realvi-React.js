@@ -8,7 +8,7 @@ const Repositories =  ({ avatar, repo, error, submitHandler, searchRepos, input 
   return (
   <Fragment>
     <SearchProfile
-      placeholder={'Search Repository'} submitHandler={submitHandler} method={searchRepos} input={input} />
+      placeholder={'Search Profile'} submitHandler={submitHandler} method={searchRepos} input={input} />
     <Alert>{error}</Alert> 
     <ContainerRepositories>
       {avatar ?  <span>

@@ -44,7 +44,7 @@ class Commits extends Component {
         <Alert>{error}</Alert> 
           {this.setCommits(input).slice(0, 20).map((e, idx) => <li key={idx}>{e.commit.message}</li>)}
         </ListCommits>
-        <StyledLink  to='/' className='commits-btn'>BACK TO REPOSITORIES</StyledLink>
+        <StyledLink  to='/' className='commits-btn'>BACK TO PROFILE</StyledLink>
       </ContainerCommits>
     );
   }
