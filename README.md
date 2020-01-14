@@ -22,12 +22,13 @@ npm start # build-in the project Port:3000
 ## TECNOLOGIAS
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)  
 [React](https://reactjs.org/)  
-[React-Router](https://www.npmjs.com/package/react-router)
+[React-Router](https://www.npmjs.com/package/react-router)    
 [Axios](https://github.com/axios/axios)  
 [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)  
 [HTML](https://devdocs.io/html/)    
 [Style-Components](https://www.styled-components.com/)      
-[Netlify](https://www.netlify.com/)
+[Netlify](https://www.netlify.com/)   
+[PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes)
 
 # INTRODUCÃO AO TESTE
 ### TESTE FRONT-END 
