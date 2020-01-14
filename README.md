@@ -27,7 +27,8 @@ npm start # build-in the project Port:3000
 [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)  
 [HTML](https://devdocs.io/html/)    
 [Style-Components](https://www.styled-components.com/)      
-[Netlify](https://www.netlify.com/)
+[Netlify](https://www.netlify.com/)   
+[PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes)
 
 # INTRODUCÃO AO TESTE
 ### TESTE FRONT-END 
