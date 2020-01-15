@@ -19,6 +19,7 @@ No terminal, dentro da pasta do projeto rode npm start para iniciar o servidor.
 ```bash
 npm start # build-in the project Port:3000
 ```
+
 ## TECNOLOGIAS
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)  
 [React](https://reactjs.org/)  
@@ -37,5 +38,4 @@ Teste para avaliação do nível técnico para posição de frontend.
 Criar uma interface web que se conecta à API do Github e lista todos os repositórios públicos de um usuário.
 
 ## Autor
-
 Feito com :heart: por Grazi Diandra.
